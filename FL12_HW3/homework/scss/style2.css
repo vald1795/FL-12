@@ -1,10 +1,10 @@
 body {
   margin: 0 auto;
-  background-color: #fff; }
+  background-color: #21232e; }
   body .header {
     margin: 0 auto;
     width: 1920px;
-    background: url("../img/m-h-day.jpg") no-repeat;
+    background: url("../img/m-h-night.jpg") no-repeat;
     background-size: cover;
     background-position-y: -247px;
     border-bottom-right-radius: 36%; }
@@ -28,7 +28,7 @@ body {
           font-weight: bold;
           line-height: 23px;
           text-align: center;
-          color: #2c2f3c; }
+          color: #fff; }
           body .header .hop .landing-logo p span, body .header .hop .footer .footer-wrap .footer_logo p span, body .footer .footer-wrap .header .hop .footer_logo p span {
             font-weight: normal; }
       body .header .hop .header_heading {
@@ -37,13 +37,13 @@ body {
         font-family: "Source Sans Pro", sans-serif;
         font-weight: bold;
         font-size: 66px;
-        color: #2c2f3c;
+        color: #fff;
         z-index: 1; }
         body .header .hop .header_heading:before {
           position: absolute;
           content: "";
           height: 51px;
-          background-color: #14a0c7;
+          background-color: #ff4e33;
           z-index: -1;
           width: 279px;
           transform: matrix(1, 0, 0, 1, 0, 105); }
@@ -54,7 +54,7 @@ body {
         font-family: "Hind", sans-serif;
         line-height: 21px;
         white-space: pre-line;
-        color: #2c2f3c; }
+        color: #fff; }
       body .header .hop div:nth-last-child(1) {
         display: flex;
         margin-bottom: 170px;
@@ -71,7 +71,7 @@ body {
           font-family: "Hind", sans-serif;
           font-size: 19px;
           color: #fff;
-          background-color: #699900;
+          background-color: #e3ac00;
           border-radius: 6px;
           border: none; }
         body .header .hop div:nth-last-child(1) a {
@@ -84,7 +84,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fff;
+    background-color: #21232e;
     margin: 0 auto;
     margin-bottom: 210px; }
     body .section .section_text {
@@ -92,13 +92,13 @@ body {
       font-family: "Source Sans Pro", sans-serif;
       font-size: 39px;
       font-weight: bold;
-      color: #2c2f3c;
+      color: #fff;
       z-index: 1; }
       body .section .section_text:before {
         position: absolute;
         content: "";
         height: 51px;
-        background-color: #14a0c7;
+        background-color: #ff4e33;
         z-index: -1;
         width: 185px;
         transform: matrix(1, 0, 0, 1, 202, -5); }
@@ -112,7 +112,7 @@ body {
         display: flex;
         width: 1110px;
         margin-top: 20px;
-        background: #21232e;
+        background: #3b3f50;
         border-radius: 5px; }
         body .section .section_card_wrap .section_card img {
           width: 430px;
@@ -152,7 +152,7 @@ body {
       width: 1200px;
       font-family: "Hind", sans-serif;
       color: #fff;
-      background: linear-gradient(to right, #679608, #2d5bdb);
+      background: linear-gradient(to right, #dfa703, #922b53);
       border-radius: 5px; }
       body .section .section_banner button {
         display: flex;
@@ -164,7 +164,7 @@ body {
         font-family: "Hind", sans-serif;
         font-size: 19px;
         color: #fff;
-        background-color: #699900;
+        background-color: #e3ac00;
         border-radius: 6px;
         border: none; }
       body .section .section_banner .section_banner_heading {
@@ -172,12 +172,12 @@ body {
         margin-bottom: 22px;
         font-size: 26px;
         font-weight: bold;
-        color: #2c2f3c; }
+        color: #fff; }
         body .section .section_banner .section_banner_heading:before {
           position: absolute;
           content: "";
           height: 51px;
-          background-color: #14a0c7;
+          background-color: #ff4e33;
           z-index: -1;
           width: 59px;
           transform: matrix(1, 0, 0, 1, 105, -5); }
@@ -188,7 +188,7 @@ body {
     width: 1920px;
     height: 240px;
     margin: 0 auto;
-    background: #21232e; }
+    background: #3b3f50; }
     body .footer .footer-wrap {
       display: flex;
       align-items: center;
@@ -212,7 +212,7 @@ body {
           font-weight: bold;
           line-height: 23px;
           text-align: center;
-          color: #2c2f3c; }
+          color: #fff; }
           body .footer .footer-wrap .landing-logo p span, body .footer .footer-wrap .footer_logo p span {
             font-weight: normal; }
       body .footer .footer-wrap .footer_logo {
@@ -221,3 +221,5 @@ body {
           color: #fff; }
       body .footer .footer-wrap .footer_text {
         width: 359px; }
+
+/*# sourceMappingURL=style2.css.map */

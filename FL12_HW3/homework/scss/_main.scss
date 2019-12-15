@@ -79,6 +79,7 @@ body {
     background-color: $bodyBackground;
 
     .header {
+        margin: $marginCenter;
         width: 1920px;
         background: $headerBg no-repeat;
         background-size: cover;
@@ -254,10 +255,34 @@ body {
             margin: $marginCenter;
             font-family: map-get($fonts, hind), map-get($fonts, sserif);
             color: #fff;
-            @include logo;
+
+            .landing-logo {
+                margin-top: 20px;
+                display: flex;
+
+                img {
+                    width: 45px;
+                    height: 45px;
+                }
+
+                p {
+                    @include display_flex;
+                    margin-top: 0px;
+                    margin-left: 15px;
+                    font-family: map-get($fonts, source), map-get($fonts, sserif);
+                    font-weight: bold;
+                    line-height: 23px;
+                    text-align: center;
+                    color: $logoCollor;
+
+                    span {
+                        font-weight: normal;
+                    }
+                }
+            }
 
             .footer_logo {
-                @extend.landing-logo;
+                @extend .landing-logo;
                 margin-top: 0;
 
                 p {
