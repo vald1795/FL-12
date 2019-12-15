@@ -1,0 +1,273 @@
+// Write your styles here
+$marginCenter: 0 auto;
+
+$fonts: (hind: 'Hind',
+    sserif: sans-serif,
+    source: 'Source Sans Pro'
+);
+
+@mixin display_flex {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin buttons {
+    button {
+        @include display_flex;
+        justify-content: center;
+        align-items: center;
+        width: 140px;
+        height: 48px;
+        font-family: map-get($fonts, hind), map-get($fonts, sserif);
+        font-size: 19px;
+        color: $buttonTextCollor;
+        background-color: $buttonCollor;
+        border-radius: 6px;
+        border: none;
+    }
+}
+
+@mixin logo {
+    .landing-logo {
+        margin-top: 20px;
+        display: flex;
+
+        img {
+            width: 45px;
+            height: 45px;
+        }
+
+        p {
+            @include display_flex;
+            margin-top: 0px;
+            margin-left: 15px;
+            font-family: map-get($fonts, source), map-get($fonts, sserif);
+            font-weight: bold;
+            line-height: 23px;
+            text-align: center;
+            color: $logoCollor;
+
+            span {
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+
+
+@mixin links {
+    a {
+        display: flex;
+        align-items: center;
+        font-family: map-get($fonts, hind), map-get($fonts, sserif);
+        font-size: 19px;
+        color: $linkCollor;
+    }
+}
+
+@mixin beforeElement {
+    position: absolute;
+    content: "";
+    height: 51px;
+    background-color: $beforeCollor;
+    z-index: -1;
+}
+
+body {
+    margin: $marginCenter;
+    background-color: $bodyBackground;
+
+    .header {
+        width: 1920px;
+        background: $headerBg no-repeat;
+        background-size: cover;
+        background-position-y: -247px;
+        border-bottom-right-radius: 36%;
+
+        .hop {
+            @include display_flex;
+            @include logo;
+            width: 1530px;
+            margin: $marginCenter;
+
+
+            .header_heading {
+                width: 498px;
+                margin-top: 82px;
+                font-family: map-get($fonts, source), map-get($fonts, sserif);
+                font-weight: bold;
+                font-size: 66px;
+                color: $blackText;
+                z-index: 1;
+
+                &:before {
+                    @include beforeElement;
+                    width: 279px;
+                    transform: matrix(1, 0, 0, 1, 0, 105);
+                }
+            }
+
+            .header_text {
+                width: 624px;
+                font-size: 16px;
+                margin-top: 0;
+                font-family: map-get($fonts, hind), map-get($fonts, sserif);
+                line-height: 21px;
+                white-space: pre-line;
+                color: $blackText;
+            }
+
+            div {
+                &:nth-last-child(1) {
+                    display: flex;
+                    margin-bottom: 170px;
+                    margin-top: 30px;
+                    width: 472px;
+                    justify-content: space-between;
+                    @include buttons;
+                    @include links;
+                }
+            }
+
+        }
+    }
+
+    .section {
+        @include display_flex;
+        align-items: center;
+        background-color: $bodyBackground;
+        margin: $marginCenter;
+        margin-bottom: 210px;
+
+
+        .section_text {
+            margin-top: 46px;
+            font-family: map-get($fonts, source), map-get($fonts, sserif);
+            font-size: 39px;
+            font-weight: bold;
+            color: $blackText;
+            z-index: 1;
+
+            &:before {
+                @include beforeElement;
+                width: 185px;
+                transform: matrix(1, 0, 0, 1, 202, -5);
+            }
+        }
+
+        .section_card_wrap {
+            @include display_flex;
+            align-items: center;
+            width: 1530px;
+            margin: $marginCenter;
+
+            .section_card {
+                display: flex;
+                width: 1110px;
+                margin-top: 20px;
+                background: $sectionBlock;
+                border-radius: 5px;
+
+                img {
+                    width: 430px;
+                    height: 290px;
+                    margin-left: 17px;
+                    margin-top: 17px;
+                    margin-bottom: 17px;
+                    border-radius: 5px;
+
+                }
+
+                .section_card_right_container {
+                    width: 500px;
+                    height: fit-content;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-left: 80px;
+                    margin-top: 18px;
+                    font-family: map-get($fonts, hind), map-get($fonts, sserif);
+                    color: #fff;
+                    @include links;
+
+                    .section_card_heading {
+                        margin-bottom: 30px;
+                        font-weight: bold;
+                        font-size: 22px;
+                    }
+
+                    .section_card_text {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+
+        .section_banner {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: absolute;
+            transform: matrix(1, 0, 0, 1, 0, 1295);
+            width: 1200px;
+            font-family: map-get($fonts, hind), map-get($fonts, sserif);
+            color: #fff;
+            background: $gradient;
+            border-radius: 5px;
+            @include buttons;
+
+            .section_banner_heading {
+                margin-top: 20px;
+                margin-bottom: 22px;
+                font-size: 26px;
+                font-weight: bold;
+                color: $blackText;
+
+                &:before {
+                    @include beforeElement;
+                    width: 59px;
+                    transform: matrix(1, 0, 0, 1, 105, -5);
+                }
+
+            }
+
+            .section_banner_text {
+                margin-top: 0;
+            }
+        }
+
+    }
+
+    .footer {
+        display: flex;
+        width: 1920px;
+        height: 240px;
+        margin: $marginCenter;
+        background: $sectionBlock;
+
+        .footer-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 1530px;
+            margin: $marginCenter;
+            font-family: map-get($fonts, hind), map-get($fonts, sserif);
+            color: #fff;
+            @include logo;
+
+            .footer_logo {
+                @extend.landing-logo;
+                margin-top: 0;
+
+                p {
+                    color: #fff;
+                }
+            }
+
+            .footer_text {
+                width: 359px;
+            }
+        }
+    }
+}
