@@ -1,16 +1,14 @@
-function countNumbers(number) {
-    for (let i = 1; i < arguments.length; i++) {
-        arguments[i + 1](result) {
-            arguments[i](number) {
-                console.log(result)
-                return result
+// eslint-disable-next-line no-unused-vars
+function countNumber(a) {
+    let obj = {};
+    for (let i = 0; i < a.length; i++) {
+        if (+a[i] || a[i] === '0') {
+            if (obj[a[i]]) {
+                obj[a[i]] += 1
+            } else {
+                obj[a[i]] = 1
             }
         }
     }
-    
+    return obj
 }
-function addOne (x) {
-    return x + 1;
-}
-
-counterNumbers(3,addOne, addOne, addOne)

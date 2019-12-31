@@ -1,9 +1,10 @@
-function isBigger() {
-    let min = arguments[0];
-    for (let i = 1; i < arguments.length; i++) {
-        if (arguments[i] < min) {
-            min = arguments[i];
+// eslint-disable-next-line no-unused-vars
+function getMin() {
+    let numberMin = arguments[0];
+    for (let i = 0; i < arguments.length; i++) {
+        if (arguments[i] < numberMin) {
+            numberMin = arguments[i];
         }
     }
-    return(min)
+    return numberMin
 }
